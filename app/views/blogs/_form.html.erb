@@ -1,23 +1,11 @@
-<%= form_with(model: blog) do |form| %>
-  <% if blog.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+<%= bootstrap_form_for(blog) do |f| %>
+  <%= f.text_field :title %>
+  <%= f.rich_text_area :content %>
+  <%= f.submit %>
+<% end %>
 
-      <ul>
-        <% blog.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
+<% if blog.persisted? %>
+  <%= button_to blog, method: :delete, class: 'delete-button' do %>
+    <i class="bi bi-trash"></i>
   <% end %>
-
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-    <%= form.rich_text_area :content %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>

@@ -1,13 +1,9 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: %i[ show edit update destroy ]
+  before_action :set_blog, only: %i[ edit update destroy ]
 
   # GET /blogs
   def index
-    @blogs = Blog.all
-  end
-
-  # GET /blogs/1
-  def show
+    @blogs = Blog.order(id: :desc)
   end
 
   # GET /blogs/new
@@ -24,7 +20,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
 
     if @blog.save
-      redirect_to @blog, notice: "Blog was successfully created."
+      redirect_to root_url, notice: "Blog was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -33,7 +29,7 @@ class BlogsController < ApplicationController
   # PATCH/PUT /blogs/1
   def update
     if @blog.update(blog_params)
-      redirect_to @blog, notice: "Blog was successfully updated.", status: :see_other
+      redirect_to root_url, notice: "Blog was successfully updated.", status: :see_other
     else
       render :edit, status: :unprocessable_entity
     end
@@ -42,7 +38,7 @@ class BlogsController < ApplicationController
   # DELETE /blogs/1
   def destroy
     @blog.destroy
-    redirect_to blogs_url, notice: "Blog was successfully destroyed.", status: :see_other
+    redirect_to root_url, notice: "Blog was successfully destroyed.", status: :see_other
   end
 
   private

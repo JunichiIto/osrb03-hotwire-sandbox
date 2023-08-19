@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Osrb03HotwireSandbox</title>
+    <title>Hotwire Sandbox #osrb03</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +12,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="p-3 container">
+      <p style="color: green"><%= notice %></p>
+      <%= yield %>
+    </div>
   </body>
 </html>

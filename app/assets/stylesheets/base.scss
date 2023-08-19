@@ -1,0 +1,35 @@
+body {
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: 80%;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: auto;
+  }
+}
+
+.header {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.new-link {
+  display: block;
+  text-align: center;
+  margin: 20px 0;
+}
+
+a {
+  color: #e74c3c;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
