@@ -5,6 +5,7 @@
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^7.3.0",
     "@popperjs/core": "^2.11.8",
+    "@rails/actiontext": "^7.0.7",
     "autoprefixer": "^10.4.15",
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.5",
@@ -12,7 +13,8 @@
     "nodemon": "^3.0.1",
     "postcss": "^8.4.28",
     "postcss-cli": "^10.1.0",
-    "sass": "^1.66.1"
+    "sass": "^1.66.1",
+    "trix": "^2.0.5"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
