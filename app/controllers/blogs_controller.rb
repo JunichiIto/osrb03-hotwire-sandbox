@@ -29,7 +29,7 @@ class BlogsController < ApplicationController
   # PATCH/PUT /blogs/1
   def update
     if @blog.update(blog_params)
-      redirect_to root_url, notice: "Blog was successfully updated.", status: :see_other
+      # None
     else
       render :edit, status: :unprocessable_entity
     end
