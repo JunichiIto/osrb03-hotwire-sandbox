@@ -20,7 +20,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
 
     if @blog.save
-      # None
+      # TODO: flashメッセージはあとでTurbo化する
     else
       render :new, status: :unprocessable_entity
     end
