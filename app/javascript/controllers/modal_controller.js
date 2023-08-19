@@ -7,4 +7,10 @@ export default class extends Controller {
     this.modal = new Modal(this.element)
     this.modal.show()
   }
+
+  close(event) {
+    if (event.detail.success) {
+      this.modal.hide()
+    }
+  }
 }
