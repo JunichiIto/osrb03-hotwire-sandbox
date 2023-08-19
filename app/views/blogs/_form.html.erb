@@ -6,7 +6,7 @@
   <% end %>
 
   <% if blog.persisted? %>
-    <%= button_to blog, method: :delete, class: 'delete-button' do %>
+    <%= button_to blog, method: :delete, class: 'delete-button', data: { turbo_confirm: "Are you sure?" } do %>
       <i class="bi bi-trash"></i>
     <% end %>
   <% end %>
