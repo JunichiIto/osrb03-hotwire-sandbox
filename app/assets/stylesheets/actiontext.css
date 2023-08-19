@@ -33,3 +33,7 @@
 trix-toolbar .trix-button-group.trix-button-group--file-tools {
   display: none;
 }
+
+.trix-content {
+  word-break: break-all;
+}
