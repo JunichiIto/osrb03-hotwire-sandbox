@@ -38,7 +38,6 @@ class BlogsController < ApplicationController
   # DELETE /blogs/1
   def destroy
     @blog.destroy
-    redirect_to root_url, notice: "Blog was successfully destroyed.", status: :see_other
   end
 
   private
