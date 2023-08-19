@@ -29,7 +29,7 @@ class BlogsController < ApplicationController
   # PATCH/PUT /blogs/1
   def update
     if @blog.update(blog_params)
-      # None
+      # TODO: flashメッセージはあとでTurbo化する
     else
       render :edit, status: :unprocessable_entity
     end
@@ -38,6 +38,7 @@ class BlogsController < ApplicationController
   # DELETE /blogs/1
   def destroy
     @blog.destroy
+    # TODO: flashメッセージはあとでTurbo化する
   end
 
   private
