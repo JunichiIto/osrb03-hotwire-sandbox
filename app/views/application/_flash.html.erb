@@ -1,0 +1,9 @@
+<% if notice %>
+  <div class="mb-2 toast hide border-primary" data-controller="toast" data-turbo-temporary>
+    <div class="toast-header text-primary">
+      <strong class="me-auto"><%= icon_with_text("check-circle", "Success") %></strong>
+      <button class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body"><%= notice %></div>
+  </div>
+<% end %>
