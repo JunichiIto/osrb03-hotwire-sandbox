@@ -29,7 +29,7 @@ class BlogsController < ApplicationController
   # PATCH/PUT /blogs/1
   def update
     if @blog.update(blog_params)
-      redirect_to root_url, notice: "Blog was successfully updated.", status: :see_other
+      # TODO: flashメッセージはあとでTurbo化する
     else
       render :edit, status: :unprocessable_entity
     end
@@ -38,7 +38,7 @@ class BlogsController < ApplicationController
   # DELETE /blogs/1
   def destroy
     @blog.destroy
-    redirect_to root_url, notice: "Blog was successfully destroyed.", status: :see_other
+    # TODO: flashメッセージはあとでTurbo化する
   end
 
   private
