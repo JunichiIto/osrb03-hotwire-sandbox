@@ -73,3 +73,4 @@ end
 
 gem "bootstrap_form"
 gem "pg"
+gem "faker", require: false # in order to run rails db:seed in production
