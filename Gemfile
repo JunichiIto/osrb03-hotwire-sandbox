@@ -72,3 +72,4 @@ group :test do
 end
 
 gem "bootstrap_form"
+gem "faker", require: false # in order to run rails db:seed in production
