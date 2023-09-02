@@ -1,0 +1,41 @@
+@mixin name-box($name, $color) {
+  content: $name ": #" attr(id);
+  position: relative;
+  top: -14px;
+  right: -4px;
+  display: inline-block;
+  color: $color;
+  font-size: 18px;
+  background-color: white;
+  padding: 4px;
+  border: 2px $color solid;
+}
+
+$frame-color: red;
+turbo-frame {
+  border: 2px $frame-color solid;
+  display: block;
+  padding: 0 10px 10px 10px;
+  &::before {
+    @include name-box($name: "Frame", $color: red);
+  }
+}
+
+$blogs-color: blue;
+#blogs {
+  border: 2px $blogs-color solid;
+  display: block;
+  &::before {
+    @include name-box($name: "div", $color: blue);
+  }
+}
+
+$blog-color: green;
+#blogs > div {
+  border: 2px solid $blog-color;
+  margin-left: 10px;
+  margin-right: 10px;
+  &::before {
+    @include name-box($name: "div", $color: green);
+  }
+}
