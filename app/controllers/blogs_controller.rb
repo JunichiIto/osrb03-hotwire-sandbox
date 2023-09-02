@@ -20,7 +20,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
 
     if @blog.save
-      # TODO: flashメッセージはあとでTurbo化する
+      flash.now.notice = "Blog was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class BlogsController < ApplicationController
   # PATCH/PUT /blogs/1
   def update
     if @blog.update(blog_params)
-      # TODO: flashメッセージはあとでTurbo化する
+      flash.now.notice = "Blog was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end
@@ -38,7 +38,7 @@ class BlogsController < ApplicationController
   # DELETE /blogs/1
   def destroy
     @blog.destroy
-    # TODO: flashメッセージはあとでTurbo化する
+    flash.now.notice = "Blog was successfully destroyed."
   end
 
   private
