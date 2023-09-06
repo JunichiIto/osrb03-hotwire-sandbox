@@ -1,11 +1,13 @@
-<%= bootstrap_form_for(blog) do |f| %>
-  <%= f.text_field :title %>
-  <%= f.rich_text_area :content %>
-  <%= f.submit %>
-<% end %>
+<%= turbo_frame_tag dom_id(blog, :form) do %>
+  <%= bootstrap_form_for(blog, html: { data: { action: "turbo:submit-end->modal#close" } }) do |f| %>
+    <%= f.text_field :title %>
+    <%= f.rich_text_area :content %>
+    <%= f.submit %>
+  <% end %>
 
-<% if blog.persisted? %>
-  <%= button_to blog, method: :delete, class: 'delete-button', data: { turbo_confirm: "Are you sure?" } do %>
-    <i class="bi bi-trash"></i>
+  <% if blog.persisted? %>
+    <%= button_to blog, method: :delete, class: 'delete-button', data: { turbo_confirm: "Are you sure?" } do %>
+      <i class="bi bi-trash"></i>
+    <% end %>
   <% end %>
 <% end %>

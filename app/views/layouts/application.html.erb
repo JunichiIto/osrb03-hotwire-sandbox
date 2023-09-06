@@ -17,5 +17,7 @@
       <p style="color: green"><%= notice %></p>
       <%= yield %>
     </div>
+    <%= turbo_frame_tag "modal" %>
+    <div id="flash" class="position-fixed top-0 end-0 flashes"></div>
   </body>
 </html>

@@ -1,7 +1,9 @@
+<%= turbo_stream_from "blogs" %>
+
 <div class="header">
   <h1>Blogs</h1>
 
-  <%= link_to "New blog", new_blog_path, class: 'new-link' %>
+  <%= link_to "New blog", new_blog_path, class: 'new-link', data: { turbo_frame: 'modal' } %>
 </div>
 
 <div id="blogs">
