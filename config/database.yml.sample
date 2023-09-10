@@ -1,0 +1,15 @@
+development:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: osrb03_development
+  password:
+  template: template0
+
+test:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: osrb03_test
+  password:
+  template: template0
