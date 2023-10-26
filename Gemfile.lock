@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/hotwired/turbo-rails.git
+  revision: 4cb02fcbee30e72f1a6280163135107c58c3700f
+  branch: page-refreshes
+  specs:
+    turbo-rails (1.4.0)
+      actionpack (>= 6.0.0)
+      activejob (>= 6.0.0)
+      railties (>= 6.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -199,10 +209,6 @@ GEM
       railties (>= 6.0.0)
     thor (1.2.2)
     timeout (0.4.0)
-    turbo-rails (1.4.0)
-      actionpack (>= 6.0.0)
-      activejob (>= 6.0.0)
-      railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     web-console (4.2.0)
@@ -243,7 +249,7 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
-  turbo-rails
+  turbo-rails!
   tzinfo-data
   web-console
   webdrivers

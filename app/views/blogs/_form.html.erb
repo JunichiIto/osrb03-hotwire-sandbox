@@ -1,4 +1,4 @@
-<%= turbo_frame_tag dom_id(blog, :form), target: :_top do %>
+<%= turbo_frame_tag dom_id(blog, :form), target: :_top, autoscroll: false, data: { autoscroll_block: "start" } do %>
   <%= bootstrap_form_for(blog, html: { data: { action: "turbo:submit-end->modal#close" } }) do |f| %>
     <%= f.text_field :title %>
     <%= f.rich_text_area :content %>

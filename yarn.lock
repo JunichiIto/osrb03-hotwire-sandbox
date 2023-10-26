@@ -125,10 +125,11 @@
     "@hotwired/turbo" "^7.3.0"
     "@rails/actioncable" "^7.0"
 
-"@hotwired/turbo@^7.3.0":
+"@hotwired/turbo@^7.3.0", "@hotwired/turbo@https://github.com/hotwired/turbo.git#morph-refreshes":
   version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@hotwired/turbo/-/turbo-7.3.0.tgz#2226000fff1aabda9fd9587474565c9929dbf15d"
-  integrity sha512-Dcu+NaSvHLT7EjrDrkEmH4qET2ZJZ5IcCWmNXxNQTBwlnE5tBZfN6WxZ842n5cHV52DH/AKNirbPBtcEXDLW4g==
+  resolved "https://github.com/hotwired/turbo.git#0e2081f8a933c0916313bc0b14a7640f34fad827"
+  dependencies:
+    idiomorph "https://github.com/basecamp/idiomorph#rollout-build"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -446,6 +447,10 @@ has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
   integrity sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==
+
+"idiomorph@https://github.com/basecamp/idiomorph#rollout-build":
+  version "0.0.8"
+  resolved "https://github.com/basecamp/idiomorph#e906820368e4c9c52489a3336b8c3826b1bf6de5"
 
 ignore-by-default@^1.0.1:
   version "1.0.1"

@@ -3,4 +3,7 @@
     <%= link_to blog.title, [:edit, blog], data: { turbo_frame: 'modal' } %>
   </h2>
   <%= blog.content %>
+  <%= button_to blog, method: :delete, class: 'delete-button', data: { turbo_confirm: "Are you sure?" } do %>
+    <i class="bi bi-trash"></i>
+  <% end %>
 </div>

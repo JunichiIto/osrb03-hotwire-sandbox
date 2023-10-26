@@ -10,14 +10,17 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "actiontext", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <%= yield :head %>
+    <meta name="turbo-scroll" value="preserve">
   </head>
 
-  <body>
+  <body autoscroll="false">
     <div class="p-3 container">
       <p style="color: green"><%= notice %></p>
       <%= yield %>
     </div>
-    <%= turbo_frame_tag "modal" %>
+    <%= turbo_frame_tag "modal", autoscroll: false %>
     <div id="flash" class="position-fixed top-0 end-0 flashes"></div>
   </body>
 </html>
