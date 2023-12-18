@@ -25,7 +25,8 @@ class BlogsController < ApplicationController
       # render inline: '', layout: true
       redirect_to blogs_path #, notice: "Blog was successfully created."
     else
-      render :new, status: :unprocessable_entity
+      @blogs = Blog.order(id: :desc)
+      render :index, status: :unprocessable_entity
     end
   end
 

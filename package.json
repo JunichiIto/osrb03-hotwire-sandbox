@@ -3,8 +3,7 @@
   "private": "true",
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
-    "@hotwired/turbo": "https://github.com/hotwired/turbo.git#morph-refreshes",
-    "@hotwired/turbo-rails": "^7.3.0",
+    "@hotwired/turbo-rails": "8.0.0-beta.1",
     "@popperjs/core": "^2.11.8",
     "@rails/actiontext": "^7.0.7",
     "autoprefixer": "^10.4.15",
