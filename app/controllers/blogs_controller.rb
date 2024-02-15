@@ -25,7 +25,7 @@ class BlogsController < ApplicationController
     if @blog.save
       @blog.broadcast_prepend_to("blogs")
       flash.now.notice = "Blog was successfully created."
-      render inline: '', layout: true
+      redirect_to blogs_path
     else
       render :new, status: :unprocessable_entity
     end
