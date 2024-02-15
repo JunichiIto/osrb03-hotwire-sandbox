@@ -1,3 +1,18 @@
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+
+html[data-turbo-visit-direction="forward"]::view-transition-old(*) {
+  animation: slidein 0.5s;
+}
+
 body {
   background-color: #f5f5f5;
 }

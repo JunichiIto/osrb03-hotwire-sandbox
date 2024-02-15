@@ -2,9 +2,6 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: %i[ edit update destroy show ]
 
   def show
-    logger.debug "Sleeping for 1 second"
-    sleep 1
-    logger.debug "Sleeping ended"
   end
 
   # GET /blogs
