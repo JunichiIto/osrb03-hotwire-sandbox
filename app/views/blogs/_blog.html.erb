@@ -2,5 +2,8 @@
   <h2>
     <%= link_to blog.title, [:edit, blog], data: { turbo_frame: 'modal' } %>
   </h2>
+  <h2>
+    <%= link_to blog.title, blog %>
+  </h2>
   <%= blog.content %>
 </div>
